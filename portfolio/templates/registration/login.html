@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body style="background-color: #080808" align="center">
+    <div class="mb-4">
+        <h2 style="color:white;">Login</h2>
+        <form method="post" action="{% url 'login' %}"style="color:white;">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Se connecter</button>
+            {% if form.non_field_errors %} {% for error in form.non_field_errors %}
+          <p style="font-size: 13px;">
+            {{ error|escape }}
+          </p>
+          {% endfor %} {% endif %}
+        </form>  
+    </div>
+</body>
+</html>

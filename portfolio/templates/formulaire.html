@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style.css'%}"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+    <div>
+        <br><br>
+        <h2 style="color:white;">Entrez vos identifiants</h2>
+        <br><br>
+        <form method="POST" style="color:white;">
+            {% csrf_token %}
+            {{form.as_p}}
+            <br><br>
+            <button type="submit">
+                S'inscrire
+            </button>
+            
+            <button onclick="window.location.href='http://127.0.0.1:8000/login/';">
+        
+                Se Connecter
+                
+            </button>
+            
+        </form>
+    </div>
+    <br> <br>
+    <div align="center">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Poste</th>
+                    <th>Observation</th>
+                    <th>Mail</th>
+                    <!-- <th>Picture</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for utilisateur in utilisateurs %}
+                <tr>
+                    <td width=150>{{ utilisateur.nom }}</td>
+                    <td width=150>{{ utilisateur.poste }}</td>
+                    <td width=150>{{ utilisateur.observation }}</td>
+                    <td width=150>{{ utilisateur.mail }}</td>
+                    {% comment %} <td>{{ utilisateur.mdp }}</td> {% endcomment %}
+                    <!-- <td><img src="{{ user.picture }}" alt="Image de l'utilisateur" width="100" height="100"></td> -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</br>
+
+{% comment %} <form action="{% url 'login' %}">
+     {% csrf_token %}
+    <button> Se deconnecter</button>
+</form> {% endcomment %}
+
+</body>
+</html>

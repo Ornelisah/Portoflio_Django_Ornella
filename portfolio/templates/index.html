@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornella's portfolio Website</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="{% static 'ornellaPic.png' %} class="logo">
+                <ul>
+                    <li> <a href="#about-col-2">Accueil </a> </li>
+                    <li> <a href="http://127.0.0.1:8000/realisation">Réalisation </a> </li>
+                    <li> <a href="http://127.0.0.1:8000/competence">Compétence </a> </li>
+                    <li> <a href="http://127.0.0.1:8000/loisir/">Loisir </a> </li>
+                    <li> <a href="http://127.0.0.1:8000/contact/">Contact </a> </li>
+                </ul>
+            </nav>
+            <div class="header-text">
+
+                <h1>
+                    Bonjour et bienvenue, Je suis <span> Ornella </span>
+                </h1>
+                <p> Concépteur Développeur d'Applications Numériques</p>
+            </div>
+        </div>
+    </div>
+    <!-- abouttttttttt -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="{% static 'ornellaPic.png' %}" alt="">
+                </div>
+                <div id="about-col-2" class="about-col-2">
+                    <h1 class="sub-title">
+                        A propos de <span> moi </span>
+                    </h1>
+                    <br> <br>
+                    <p> Je suis Ornella, mariée avec deux enfants.<br><br>Je suis en reconversion professionnelle parce que depuis l'obtention de mon master en programmation en 2020, j'ai travaillé dans divers secteurs tels que l'enseignement, l'adaptation cinématographique et en tant que télémarketeur.<br> <br> Actuellement, après avoir passer le cap des 30ans, je me suis décidé à reprendre ma vie professionnelle en main en intégrant une formation intensive histoire de devenir opérationnelle rapidement et compenser mon gap.<br><br> D’où l'elaboration de ce portfolio mais sachez que mon parcours assez atypique n’entache en rien ma volonté à évoluer et à braver tous les obstacles à venir.Au plaisir d’avoir de vos nouvelles bientôt ! <br> <br> Bien à vous</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
